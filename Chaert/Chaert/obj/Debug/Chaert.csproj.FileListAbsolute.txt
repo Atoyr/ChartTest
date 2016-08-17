@@ -1,0 +1,16 @@
+C:\dev\git\ChartTest\Chaert\Chaert\bin\Debug\Chaert.exe.config
+C:\dev\git\ChartTest\Chaert\Chaert\bin\Debug\Chaert.exe
+C:\dev\git\ChartTest\Chaert\Chaert\bin\Debug\Chaert.pdb
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.csprojResolveAssemblyReference.cache
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\MainWindow.g.cs
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\App.g.cs
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert_MarkupCompile.cache
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert_MarkupCompile.lref
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\MainWindow.baml
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\Themes\Generic.baml
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.g.resources
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.Properties.Resources.resources
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.csproj.GenerateResource.Cache
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.exe
+C:\dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.pdb
