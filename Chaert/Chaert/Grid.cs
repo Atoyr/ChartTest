@@ -46,7 +46,23 @@ namespace Chaert
     /// </summary>
     public class Grid : Control
     {
-        private Canvas grid;
+        private Canvas      grid;
+        private Canvas      bgGrid;
+        private Grid        baseStackPanel;
+        private int         interval_x      = 30;
+        private int         interval_y      = 30;
+        private bool        isBoldLine      = false;
+        private int         boldLineCount_x = 1;
+        private int         boldLineCount_y = 1;
+        private int         lineSize_x      = 1;
+        private int         lineSize_y      = 1;
+        private int         boldLineSize_x  = 2;
+        private int         boldLineSize_y  = 2;
+        private double      bgOpacity       = 1;
+        private double      lineOpacity     = 1;
+
+
+        private Brush gridBgColor           = Brushes.DarkGreen;
 
 
         static Grid()
@@ -59,59 +75,139 @@ namespace Chaert
         {
             base.OnApplyTemplate();
 
-            if(this.grid != null)
+            if (this.baseStackPanel != null)
             {
-                grid.Loaded -= this.reWrite;
-                grid.SizeChanged -= this.reWrite;
+                baseStackPanel.SizeChanged -= this.Grid_SizeChanged;
             }
-            grid = this.GetTemplateChild("PART_Grid") as Canvas;
-
             if (this.grid != null)
             {
-                grid.Loaded += this.reWrite;
-                grid.SizeChanged += this.reWrite;
+                grid.Loaded -= this.Grid_SizeChanged;
+                //grid.SizeChanged -= this.Grid_SizeChanged;
             }
+            grid = this.GetTemplateChild("PART_Grid") as Canvas;
+            baseStackPanel = this.GetTemplateChild("PART_BaseStackPanel") as Grid;
+            if (this.baseStackPanel != null)
+            {
+                baseStackPanel.SizeChanged += this.Grid_SizeChanged;
+            }
+            if (this.grid != null)
+            {
+                grid.Loaded += this.Grid_SizeChanged;
+                //grid.SizeChanged += this.Grid_SizeChanged;
+            }
+
+            //this.setBgColor(this.gridBgColor);
+            this.setBgColor(null);
+            //this.grid.Opacity = bgOpacity;
+            //this.grid.Opacity = lineOpacity;
+
+            bgGrid = this.GetTemplateChild("PART_BgGrid") as Canvas;
+            bgGrid.Background = Brushes.DarkGreen;
+            bgGrid.Opacity = 0.5;
+            bgGrid.SizeChanged += this.Grid_SizeChanged;
 
         }
 
-        private void reWrite(object sender ,RoutedEventArgs e)
+        private int setBgColor(Brush brush)
         {
+            if (brush != null && grid != null)
+            {
+                grid.Background = brush;
+                return 0;
+            }
+
+            return -1;
+        }
+
+        private void Grid_SizeChanged(object sender ,RoutedEventArgs e)
+        {
+            // 描画クリア
             grid.Children.Clear();
- 
- 
- 
-            for (int i = 0; i< this.ActualWidth; i += 10)
-            {
-                Line line = new Line()
+
+            if (isBoldLine)
+            {
+                // 縦罫線の描画
+                for (int i = 0; i < grid.ActualWidth; i += interval_x)
                 {
-                    X1 = i,
-                    Y1 = 0,
-                    X2 = i,
-                    Y2 = this.ActualHeight,
-                };
-                line.StrokeThickness = 1;
-                line.Stroke = Brushes.Red;
-                line.SnapsToDevicePixels = true;
+                    Line line = new Line()
+                    {
+                        X1 = i,
+                        Y1 = 0,
+                        X2 = i,
+                        Y2 = grid.ActualHeight,
+                    };
+                    if (i % (this.boldLineCount_y * interval_x) == 0)
+                    {
+                        line.StrokeThickness = 4;
+                    }
+                    else
+                    {
+                        line.StrokeThickness = 1;
+                    }
+                    line.Stroke = Brushes.Red;
+                    line.SnapsToDevicePixels = true;
 
-                grid.Children.Add(line);
-            }
- 
-            for (int i = 0; i< this.ActualHeight; i += 10)
-            {
-                Line line = new Line()
+                    grid.Children.Add(line);
+                }
+
+                // 横罫線の描画
+                // 下を基点として描画する
+                for (int i = (int)grid.ActualHeight; i > 0; i -= interval_y)
                 {
-                    X1 = 0,
-                    Y1 = i,
-                    X2 = this.ActualWidth,
-                    Y2 = i,
-                };
+                    Line line = new Line()
+                    {
+                        X1 = 0,
+                        Y1 = i,
+                        X2 = grid.ActualWidth,
+                        Y2 = i,
+                    };
 
-                line.StrokeThickness = 1;
-                line.Stroke = Brushes.Red;
-                line.SnapsToDevicePixels = true;
+                    line.StrokeThickness = 1;
+                    line.Stroke = Brushes.Red;
+                    line.SnapsToDevicePixels = true;
+                    line.Opacity = this.lineOpacity;
 
-                grid.Children.Add(line);
-            }
-        }
+                    grid.Children.Add(line);
+                }
+            }
+            else
+            {
+                // 縦罫線の描画
+                for (int i = 0; i < grid.ActualWidth; i += interval_x)
+                {
+                    Line line = new Line()
+                    {
+                        X1 = i,
+                        Y1 = 0,
+                        X2 = i,
+                        Y2 = grid.ActualHeight,
+                    };
+                    line.StrokeThickness = this.lineSize_y;
+                    line.Stroke = Brushes.Red;
+                    line.SnapsToDevicePixels = true;
+
+                    grid.Children.Add(line);
+                }
+
+                // 横罫線の描画
+                // 下を基点として描画する
+                for (int i = (int)grid.ActualHeight; i > 0; i -= interval_y)
+                {
+                    Line line = new Line()
+                    {
+                        X1 = 0,
+                        Y1 = i,
+                        X2 = grid.ActualWidth,
+                        Y2 = i,
+                    };
+
+                    line.StrokeThickness = this.lineSize_x;
+                    line.Stroke = Brushes.Red;
+                    line.SnapsToDevicePixels = true;
+
+                    grid.Children.Add(line);
+                }
+            }
+        }
     }
 }

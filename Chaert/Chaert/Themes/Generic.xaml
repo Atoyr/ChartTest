@@ -11,7 +11,27 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-                        <Canvas x:Name="PART_Grid" />
+                        
+                        <Grid x:Name="PART_BaseStackPanel"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ShowGridLines="True">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" /> <!-- UpLabel -->
+                                <RowDefinition Height="*" /> <!-- Main -->
+                                <RowDefinition Height="Auto" /> <!-- DownLabel -->
+                                <RowDefinition Height="Auto" /> <!-- Scroll bar -->
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" /> <!-- LeftLabel -->
+                                <ColumnDefinition Width="*" /> <!-- Main -->
+                                <ColumnDefinition Width="Auto" /> <!-- Right Label -->
+                                <ColumnDefinition Width="Auto" /> <!-- Scroll bar -->
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Canvas x:Name="PART_BgGrid" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                <Canvas x:Name="PART_Grid" Margin="0"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+                            </Grid>
+                            <ScrollBar Grid.Row="3" Grid.ColumnSpan="4" Orientation="Horizontal" />
+                            <ScrollBar Grid.RowSpan="4" Grid.Column="3" Orientation="Vertical"  />
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
