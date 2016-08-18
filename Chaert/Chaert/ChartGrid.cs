@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -44,75 +45,71 @@ namespace Chaert
     ///     <MyNamespace:Grid/>
     ///
     /// </summary>
-    public class Grid : Control
+    public class ChartGrid : Control
     {
-        private Canvas      grid;
-        private Canvas      bgGrid;
-        private Grid        baseStackPanel;
-        private int         interval_x      = 30;
-        private int         interval_y      = 30;
-        private bool        isBoldLine      = false;
-        private int         boldLineCount_x = 1;
-        private int         boldLineCount_y = 1;
-        private int         lineSize_x      = 1;
-        private int         lineSize_y      = 1;
-        private int         boldLineSize_x  = 2;
-        private int         boldLineSize_y  = 2;
-        private double      bgOpacity       = 1;
-        private double      lineOpacity     = 1;
+        // UIオブジェクト
+        private Grid baseGrid;
+        private Canvas      lineCanvas;
+        private Canvas      backgroundCanvas;
+        private ScrollBar   horizontalScrollBar;
+        private ScrollBar   verticalScrollBar;
 
+        // UIプロパティ
+        private int lineThickness_x = 1;    // X軸描画の線の太さ
+        private int lineThickness_y = 1;    // Y軸描画の線の太さ
+        private int         interval_x      = 30;   // X軸グリッドの間隔
+        private int         interval_y      = 30;   // Y軸グリッドの間隔
+        private bool        isBoldLine      = false;    // 一定カウントで太線描画するか
+        private int         boldLineCount_x = 1;        // 太線描画する場合のX軸のカウント数
+        private int         boldLineCount_y = 1;        // 太線描画する場合のY軸のカウント数
+        private int         boldLineThickness_x  = 2;   // 太線描画する場合のX軸の線の太さ
+        private int         boldLineThickness_y  = 2;   // 太線描画する場合のY軸の線の太さ
+        private double      backgroundOpacity      = 1; // 背景色の透明度
+        private double      lineOpacity     = 1;        // 罫線の透明度
+        private Brush       gridBackgroundColor           = Brushes.DarkGreen; // 背景色
 
-        private Brush gridBgColor           = Brushes.DarkGreen;
-
-
-        static Grid()
+        static ChartGrid()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Grid)
-                , new FrameworkPropertyMetadata(typeof(Grid)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(ChartGrid)
+                , new FrameworkPropertyMetadata(typeof(ChartGrid)));
         }
 
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
+            
+            // イベント削除
+            //if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged -= this.Grid_SizeChanged; }
+            if (this.lineCanvas != null) { lineCanvas.SizeChanged -= this.Grid_SizeChanged; }
+            //if (this.backgroundCanvas != null) { backgroundCanvas.Loaded -= this.Grid_SizeChanged; }
 
-            if (this.baseStackPanel != null)
-            {
-                baseStackPanel.SizeChanged -= this.Grid_SizeChanged;
-            }
-            if (this.grid != null)
-            {
-                grid.Loaded -= this.Grid_SizeChanged;
-                //grid.SizeChanged -= this.Grid_SizeChanged;
-            }
-            grid = this.GetTemplateChild("PART_Grid") as Canvas;
-            baseStackPanel = this.GetTemplateChild("PART_BaseStackPanel") as Grid;
-            if (this.baseStackPanel != null)
-            {
-                baseStackPanel.SizeChanged += this.Grid_SizeChanged;
-            }
-            if (this.grid != null)
-            {
-                grid.Loaded += this.Grid_SizeChanged;
-                //grid.SizeChanged += this.Grid_SizeChanged;
-            }
+            // オブジェクト再取得
+            baseGrid = this.GetTemplateChild("PART_BaseGrid") as Grid;
+            lineCanvas = this.GetTemplateChild("PART_LineCanvas") as Canvas;
+            backgroundCanvas = this.GetTemplateChild("PART_BackgroundCanvas") as Canvas;
+            horizontalScrollBar = this.GetTemplateChild("PART_HorizontalScrollBar") as ScrollBar;
+            verticalScrollBar = this.GetTemplateChild("PART_VerticalScrollBar") as ScrollBar;
 
-            //this.setBgColor(this.gridBgColor);
-            this.setBgColor(null);
-            //this.grid.Opacity = bgOpacity;
-            //this.grid.Opacity = lineOpacity;
+            this.init();
 
-            bgGrid = this.GetTemplateChild("PART_BgGrid") as Canvas;
-            bgGrid.Background = Brushes.DarkGreen;
-            bgGrid.Opacity = 0.5;
-            bgGrid.SizeChanged += this.Grid_SizeChanged;
+            // イベント設定
+            //if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged += this.Grid_SizeChanged; }
+            if (this.lineCanvas != null) { lineCanvas.SizeChanged += this.Grid_SizeChanged; }
+            //if (this.backgroundCanvas != null) { backgroundCanvas.Loaded += this.Grid_SizeChanged; }
 
         }
 
-        private int setBgColor(Brush brush)
+        private void init()
         {
-            if (brush != null && grid != null)
+            this.lineCanvas.Background = null;
+            this.SetBackgroundColor(this.gridBackgroundColor);
+        }
+
+        public int SetBackgroundColor(Brush brush)
+        {
+            if (brush != null && backgroundCanvas != null)
             {
-                grid.Background = brush;
+                backgroundCanvas.Background = brush;
                 return 0;
             }
 
@@ -122,19 +119,19 @@ namespace Chaert
         private void Grid_SizeChanged(object sender ,RoutedEventArgs e)
         {
             // 描画クリア
-            grid.Children.Clear();
-
+            lineCanvas.Children.Clear();
+                        
             if (isBoldLine)
             {
                 // 縦罫線の描画
-                for (int i = 0; i < grid.ActualWidth; i += interval_x)
+                for (int i = 0; i < backgroundCanvas.ActualWidth; i += interval_x)
                 {
                     Line line = new Line()
                     {
                         X1 = i,
                         Y1 = 0,
                         X2 = i,
-                        Y2 = grid.ActualHeight,
+                        Y2 = backgroundCanvas.ActualHeight,
                     };
                     if (i % (this.boldLineCount_y * interval_x) == 0)
                     {
@@ -147,18 +144,18 @@ namespace Chaert
                     line.Stroke = Brushes.Red;
                     line.SnapsToDevicePixels = true;
 
-                    grid.Children.Add(line);
+                    lineCanvas.Children.Add(line);
                 }
 
                 // 横罫線の描画
                 // 下を基点として描画する
-                for (int i = (int)grid.ActualHeight; i > 0; i -= interval_y)
+                for (int i = (int)backgroundCanvas.ActualHeight; i > 0; i -= interval_y)
                 {
                     Line line = new Line()
                     {
                         X1 = 0,
                         Y1 = i,
-                        X2 = grid.ActualWidth,
+                        X2 = backgroundCanvas.ActualWidth,
                         Y2 = i,
                     };
 
@@ -167,45 +164,45 @@ namespace Chaert
                     line.SnapsToDevicePixels = true;
                     line.Opacity = this.lineOpacity;
 
-                    grid.Children.Add(line);
+                    lineCanvas.Children.Add(line);
                 }
             }
             else
             {
                 // 縦罫線の描画
-                for (int i = 0; i < grid.ActualWidth; i += interval_x)
+                for (int i = 0; i < backgroundCanvas.ActualWidth; i += interval_x)
                 {
                     Line line = new Line()
                     {
                         X1 = i,
                         Y1 = 0,
                         X2 = i,
-                        Y2 = grid.ActualHeight,
+                        Y2 = backgroundCanvas.ActualHeight,
                     };
-                    line.StrokeThickness = this.lineSize_y;
+                    line.StrokeThickness = this.lineThickness_y;
                     line.Stroke = Brushes.Red;
                     line.SnapsToDevicePixels = true;
 
-                    grid.Children.Add(line);
+                    lineCanvas.Children.Add(line);
                 }
 
                 // 横罫線の描画
                 // 下を基点として描画する
-                for (int i = (int)grid.ActualHeight; i > 0; i -= interval_y)
+                for (int i = (int)backgroundCanvas.ActualHeight; i > 0; i -= interval_y)
                 {
                     Line line = new Line()
                     {
                         X1 = 0,
                         Y1 = i,
-                        X2 = grid.ActualWidth,
+                        X2 = backgroundCanvas.ActualWidth,
                         Y2 = i,
                     };
 
-                    line.StrokeThickness = this.lineSize_x;
+                    line.StrokeThickness = this.lineThickness_x;
                     line.Stroke = Brushes.Red;
                     line.SnapsToDevicePixels = true;
 
-                    grid.Children.Add(line);
+                    lineCanvas.Children.Add(line);
                 }
             }
         }

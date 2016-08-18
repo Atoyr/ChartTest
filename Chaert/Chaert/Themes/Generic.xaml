@@ -4,15 +4,15 @@
     xmlns:local="clr-namespace:Chaert">
 
 
-    <Style TargetType="{x:Type local:Grid}">
+    <Style TargetType="{x:Type local:ChartGrid}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type local:Grid}">
+                <ControlTemplate TargetType="{x:Type local:ChartGrid}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         
-                        <Grid x:Name="PART_BaseStackPanel"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" ShowGridLines="True">
+                        <Grid x:Name="PART_BaseGrid">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" /> <!-- UpLabel -->
                                 <RowDefinition Height="*" /> <!-- Main -->
@@ -26,11 +26,11 @@
                                 <ColumnDefinition Width="Auto" /> <!-- Scroll bar -->
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Row="1" Grid.Column="1">
-                                <Canvas x:Name="PART_BgGrid" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                <Canvas x:Name="PART_Grid" Margin="0"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+                                <Canvas x:Name="PART_BackgroundCanvas" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                <Canvas x:Name="PART_LineCanvas" Margin="0"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
                             </Grid>
-                            <ScrollBar Grid.Row="3" Grid.ColumnSpan="4" Orientation="Horizontal" />
-                            <ScrollBar Grid.RowSpan="4" Grid.Column="3" Orientation="Vertical"  />
+                            <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Row="3" Grid.ColumnSpan="3" Orientation="Horizontal" />
+                            <ScrollBar x:Name="PART_VerticalScrollBar" Grid.RowSpan="3" Grid.Column="3" Orientation="Vertical"  />
                         </Grid>
                     </Border>
                 </ControlTemplate>
