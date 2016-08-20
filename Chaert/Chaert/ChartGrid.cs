@@ -25,8 +25,7 @@ namespace Chart
         private ScrollBar   horizontalScrollBar;
         private ScrollBar   verticalScrollBar;
 
-        private Canvas firstChart;
-        private Canvas secondChart;
+        private Canvas chartCanvas;
 
         // UIプロパティ
         private int lineThickness_Horizontal = 1;        // X軸描画の線の太さ
@@ -43,6 +42,9 @@ namespace Chart
         private Brush gridBackgroundColor = Brushes.White; // 背景色
         private Brush girdLineColor = Brushes.Gray;
         private Brush girdBoldLineColor = Brushes.DarkGray;
+
+        // グラフ関連
+        public Chart chart;
 
         static ChartGrid()
         {
@@ -65,6 +67,7 @@ namespace Chart
             backgroundCanvas = this.GetTemplateChild("PART_BackgroundCanvas") as Canvas;
             horizontalScrollBar = this.GetTemplateChild("PART_HorizontalScrollBar") as ScrollBar;
             verticalScrollBar = this.GetTemplateChild("PART_VerticalScrollBar") as ScrollBar;
+            chartCanvas = this.GetTemplateChild("PART_ChartCanvas") as Canvas;
 
             this.init();
 
