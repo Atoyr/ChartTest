@@ -70,6 +70,7 @@
     <Compile Include="ChartGrid.cs" />
     <Compile Include="ChartGrid.DrawLine.cs" />
     <Compile Include="ChartGrid.Event.cs" />
+    <Compile Include="ChartGrid.FirstChart.cs" />
     <Compile Include="ChartGrid.Property.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

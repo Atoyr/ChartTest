@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-namespace Chaert
+namespace Chart
 {
     partial class ChartGrid :Control
     {
@@ -97,7 +97,7 @@ namespace Chaert
                     // PropertyChangedCallback
                     (d, e) =>
                     {
-                        (d as ChartGrid).lineThickness_x = (int)e.NewValue;
+                        (d as ChartGrid).lineThickness_Horizontal = (int)e.NewValue;
                         // プロパティ変更時の処理
                         // 新しい値をリソースのScaleTransformにセットする
                         if ((d as ChartGrid).lineCanvas != null)

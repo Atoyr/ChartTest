@@ -47,3 +47,4 @@ P:\Dev\git\ChartTest\Chaert\Chaert\obj\Debug\Themes\Generic.baml
 P:\Dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.g.resources
 P:\Dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.Properties.Resources.resources
 P:\Dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.csproj.GenerateResource.Cache
+P:\Dev\git\ChartTest\Chaert\Chaert\obj\Debug\Chaert.csprojResolveAssemblyReference.cache

@@ -8,5 +8,9 @@ namespace Chart
 {
     partial class ChartGrid
     {
+        public int AddFirstChartData(string groupName,string key,double value)
+        {
+            return 0;
+        }
     }
 }
