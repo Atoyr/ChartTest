@@ -83,6 +83,9 @@ namespace Chart
             this.lineCanvas.Background = null;
             this.SetBackgroundColor(this.gridBackgroundColor);
             this.backgroundCanvas.Opacity = this.backgroundOpacity;
+            this.chart = new Chart();
+            //demo
+            this.demo();
         }
 
         public int SetBackgroundColor(Brush brush)
@@ -99,6 +102,8 @@ namespace Chart
         private void Grid_SizeChanged(object sender ,RoutedEventArgs e)
         {
             this.drawLine();
+            // demo
+            this.Chart_Draw();
         }
     }
 }

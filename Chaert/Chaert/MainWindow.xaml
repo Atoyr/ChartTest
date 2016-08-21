@@ -43,7 +43,7 @@
                 <MenuItem Height="25" Header="Files" />
             </Menu>
 
-            <local:ChartGrid  Grid.Row="3" Grid.Column="1" BackgroundOpacity="0.5"/>
+            <local:ChartGrid x:Name="chart" Grid.Row="3" Grid.Column="1" BackgroundOpacity="0.5"/>
 
             <!--<Button Grid.Row="2" Grid.ColumnSpan="2" Content="Toolbar" />-->
             <!--<UserControl1:chart  Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Top"/>-->

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chart
 {
-    class Point
+    public class Point
     {
         private string pointName;
         private double pointX = 0;

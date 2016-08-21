@@ -8,6 +8,11 @@ namespace Chart
 {
     public class Chart
     {
-        Series Series;
+        public DataPointCollectoin Series;
+
+        public Chart()
+        {
+            Series = new DataPointCollectoin();
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Chart
 {
-    class DataPointCollectoin : System.Collections.IEnumerable
+    public class DataPointCollectoin : System.Collections.IEnumerable
     {
         List<Point> dataPoint;
         int keyNum = 0;
@@ -52,6 +52,8 @@ namespace Chart
                 return null;
             }else { 
                 Point p = new Point(key, x, y);
+                p.LabelX = x.ToString();//TODO:書式設定
+                p.LabelY = y.ToString();
                 dataPoint.Add(p);
                 return p;
             }
