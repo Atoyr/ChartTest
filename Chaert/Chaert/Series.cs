@@ -8,7 +8,12 @@ namespace Chart
 {
     class Series
     {
-        DataPointCollectoin Points;
+        public DataPointCollectoin Points;
+
+        public Series()
+        {
+            Points = new DataPointCollectoin();
+        }
 
         double Max_X;
         double Max_Y;

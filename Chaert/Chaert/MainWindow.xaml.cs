@@ -23,7 +23,6 @@ namespace Chaert
         public MainWindow()
         {
             InitializeComponent();
-            this.chart.chart.Series
 
         }
     }

@@ -39,7 +39,7 @@ namespace Chart
         private int boldLineThickness_Vertical = 2;    // 太線描画する場合のY軸の線の太さ
         private double backgroundOpacity = 1;   // 背景色の透明度
         private double lineOpacity = 1;         // 罫線の透明度
-        private Brush gridBackgroundColor = Brushes.White; // 背景色
+        private Brush gridBackgroundColor = Brushes.Black; // 背景色
         private Brush girdLineColor = Brushes.Gray;
         private Brush girdBoldLineColor = Brushes.DarkGray;
 
@@ -58,7 +58,7 @@ namespace Chart
             
             // イベント削除
             //if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged -= this.Grid_SizeChanged; }
-            if (this.lineCanvas != null) { lineCanvas.SizeChanged -= this.Grid_SizeChanged; }
+            if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged -= this.Grid_SizeChanged; }
             //if (this.backgroundCanvas != null) { backgroundCanvas.Loaded -= this.Grid_SizeChanged; }
 
             // オブジェクト再取得
@@ -73,13 +73,14 @@ namespace Chart
 
             // イベント設定
             //if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged += this.Grid_SizeChanged; }
-            if (this.lineCanvas != null) { lineCanvas.SizeChanged += this.Grid_SizeChanged; }
+            if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged += this.Grid_SizeChanged; }
             //if (this.backgroundCanvas != null) { backgroundCanvas.Loaded += this.Grid_SizeChanged; }
 
         }
 
         private void init()
         {
+
             this.lineCanvas.Background = null;
             this.SetBackgroundColor(this.gridBackgroundColor);
             this.backgroundCanvas.Opacity = this.backgroundOpacity;
@@ -101,6 +102,10 @@ namespace Chart
 
         private void Grid_SizeChanged(object sender ,RoutedEventArgs e)
         {
+            Rect r = new Rect(0, 0, backgroundCanvas.ActualWidth, backgroundCanvas.ActualHeight);
+            lineCanvas.Clip = new RectangleGeometry() { Rect = r, RadiusX = 0, RadiusY = 0 };
+            chartCanvas.Clip = new RectangleGeometry() { Rect = r, RadiusX = 0, RadiusY = 0 };
+
             this.drawLine();
             // demo
             this.Chart_Draw();

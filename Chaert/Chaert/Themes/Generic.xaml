@@ -25,11 +25,11 @@
                                 <ColumnDefinition Width="Auto" /> <!-- Right Label -->
                                 <ColumnDefinition Width="Auto" /> <!-- Scroll bar -->
                             </Grid.ColumnDefinitions>
-                            <Grid Grid.Row="1" Grid.Column="1">
-                                <Canvas x:Name="PART_BackgroundCanvas" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                <Canvas x:Name="PART_LineCanvas" Margin="0"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
-                                <Canvas x:Name="PART_ChartCanvas" Margin="0"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
-                            </Grid>
+                            <DockPanel x:Name="PART_BaseDockPanel" Grid.Row="1" Grid.Column="1">
+                                <Canvas x:Name="PART_LineCanvas" Panel.ZIndex="2" Margin="0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+                                <Canvas x:Name="PART_ChartCanvas" Panel.ZIndex="9" Margin="0" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" />
+                                <Canvas x:Name="PART_BackgroundCanvas" Panel.ZIndex="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black"/>
+                            </DockPanel>
                             <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Row="3" Grid.ColumnSpan="3" Orientation="Horizontal" />
                             <ScrollBar x:Name="PART_VerticalScrollBar" Grid.RowSpan="3" Grid.Column="3" Orientation="Vertical"  />
                         </Grid>

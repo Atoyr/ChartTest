@@ -45,19 +45,10 @@ namespace Chart
                         Y1 = i,
                         X2 = this.backgroundCanvas.ActualWidth,
                         Y2 = i,
+                        StrokeThickness = i % (this.boldLineCount_Horizontal * this.interval_Horizontal) == 0 ? this.boldLineThickness_Horizontal : this.lineThickness_Horizontal,
+                        Stroke = i % (this.boldLineCount_Horizontal * this.interval_Horizontal) == 0 ? this.girdBoldLineColor : this.girdLineColor,
+                        SnapsToDevicePixels = true,
                     };
-                    if (i % (this.boldLineCount_Horizontal * this.interval_Horizontal) == 0)
-                    {
-                        line.StrokeThickness = this.boldLineThickness_Horizontal;
-                        line.Stroke = this.girdBoldLineColor;
-                    }
-                    else
-                    {
-                        line.StrokeThickness = this.lineThickness_Horizontal;
-                        line.Stroke = this.girdLineColor;
-                    }
-                    line.SnapsToDevicePixels = true;
-
                     lineCanvas.Children.Add(line);
                 }
             }
@@ -72,10 +63,10 @@ namespace Chart
                         Y1 = i,
                         X2 = this.backgroundCanvas.ActualWidth,
                         Y2 = i,
+                        StrokeThickness = this.lineThickness_Horizontal,
+                        Stroke = this.girdLineColor,
+                        SnapsToDevicePixels = true,
                     };
-                    line.StrokeThickness = this.lineThickness_Horizontal;
-                    line.Stroke = this.girdLineColor;
-                    line.SnapsToDevicePixels = true;
 
                     lineCanvas.Children.Add(line);
                 }

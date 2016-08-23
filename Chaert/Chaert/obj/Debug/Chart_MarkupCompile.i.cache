@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-P:\Dev\git\ChartTest\Chaert\Chaert\obj\Debug\
+C:\private\source\ChartTest\Chaert\Chaert\obj\Debug\
 Chart
 none
 false
-DEBUG;TRACE
-P:\Dev\git\ChartTest\Chaert\Chaert\App.xaml
+CODE_ANALYSIS;DEBUG;TRACE
+C:\private\source\ChartTest\Chaert\Chaert\App.xaml
 363053369
 
-19222864402
+191554913973
 13738642453
 Styles.xaml;MainWindow.xaml;Themes\Generic.xaml;
 
