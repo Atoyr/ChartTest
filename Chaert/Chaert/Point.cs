@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
-namespace Chart
+namespace Control
 {
-    public class Point
+    public class DataPoint 
     {
+        private Point point;
         private string pointName;
         private double pointX = 0;
         private double pointY = 0;
@@ -41,23 +43,23 @@ namespace Chart
             get { return labelY; }
         }
 
-        private Point() { }
+        private DataPoint() { }
 
-        public Point(string key, double x ,double y)
+        public DataPoint(string key, double x ,double y)
         {
             pointName = key;
             pointX = x;
             pointY = y;
         }
 
-        public static int CompareByX(Point a,Point b)
+        public static int CompareByX(DataPoint a,DataPoint b)
         {
             double d = a.pointX - b.pointX;
             if (d > 0) return 1;
             if (d < 0) return -1;
             return 0;
         }
-        public static int CompareByY(Point a, Point b)
+        public static int CompareByY(DataPoint a, DataPoint b)
         {
             double d = a.pointY - b.pointY;
             if (d > 0) return 1;

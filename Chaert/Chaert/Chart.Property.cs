@@ -15,9 +15,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-namespace Chart
+namespace Control
 {
-    partial class ChartGrid :Control
+    partial class Chart : System.Windows.Controls.Control
     {
         #region 背景透過プロパティ
         // 背景透過プロパティ
@@ -25,18 +25,18 @@ namespace Chart
             DependencyProperty.Register(
                 "BackgroundOpacity",
                 typeof(double),
-                typeof(ChartGrid),
+                typeof(Chart),
                 new UIPropertyMetadata(
                     1.0d,
                     // PropertyChangedCallback
                     (d, e) =>
                     {
-                        (d as ChartGrid).backgroundOpacity = (double)e.NewValue;
+                        (d as Chart).backgroundOpacity = (double)e.NewValue;
                         // プロパティ変更時の処理
                         // 新しい値をリソースのScaleTransformにセットする
-                        if ((d as ChartGrid).backgroundCanvas != null)
+                        if ((d as Chart).backgroundCanvas != null)
                         {
-                            (d as ChartGrid).backgroundCanvas.Opacity = (d as ChartGrid).backgroundOpacity;
+                            (d as Chart).backgroundCanvas.Opacity = (d as Chart).backgroundOpacity;
                         }
                     })
             );
@@ -58,18 +58,18 @@ namespace Chart
             DependencyProperty.Register(
                 "LineOpacity",
                 typeof(double),
-                typeof(ChartGrid),
+                typeof(Chart),
                 new UIPropertyMetadata(
                     1.0d,
                     // PropertyChangedCallback
                     (d, e) =>
                     {
-                        (d as ChartGrid).lineOpacity = (double)e.NewValue;
+                        (d as Chart).lineOpacity = (double)e.NewValue;
                         // プロパティ変更時の処理
                         // 新しい値をリソースのScaleTransformにセットする
-                        if ((d as ChartGrid).lineCanvas != null)
+                        if ((d as Chart).lineCanvas != null)
                         {
-                            (d as ChartGrid).lineCanvas.Opacity = (d as ChartGrid).lineOpacity;
+                            (d as Chart).lineCanvas.Opacity = (d as Chart).lineOpacity;
                         }
                     })
             );
@@ -91,18 +91,18 @@ namespace Chart
             DependencyProperty.Register(
                 "LineThickness_x",
                 typeof(int),
-                typeof(ChartGrid),
+                typeof(Chart),
                 new UIPropertyMetadata(
                     1,
                     // PropertyChangedCallback
                     (d, e) =>
                     {
-                        (d as ChartGrid).lineThickness_Horizontal = (int)e.NewValue;
+                        (d as Chart).lineThickness_Horizontal = (int)e.NewValue;
                         // プロパティ変更時の処理
                         // 新しい値をリソースのScaleTransformにセットする
-                        if ((d as ChartGrid).lineCanvas != null)
+                        if ((d as Chart).lineCanvas != null)
                         {
-                            (d as ChartGrid).Grid_SizeChanged(null, null);
+                            (d as Chart).Grid_SizeChanged(null, null);
                         }
                     })
             );

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chart
+namespace Control
 {
-    partial class ChartGrid
+    partial class Chart
     {
     }
 }

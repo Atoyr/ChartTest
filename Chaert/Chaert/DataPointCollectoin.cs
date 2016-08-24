@@ -5,16 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chart
+namespace Control
 {
     public class DataPointCollectoin : System.Collections.IEnumerable
     {
-        List<Point> dataPoint;
+        List<DataPoint> dataPoint;
         int keyNum = 0;
 
         public DataPointCollectoin()
         {
-            dataPoint = new List<Point>();
+            dataPoint = new List<DataPoint>();
         }
 
         public Object this[string key]
@@ -34,50 +34,98 @@ namespace Chart
             }
         }
 
-        public Point Find(string key)
+        public DataPoint Find(string key)
         {
             return dataPoint.Find(x => x.Key.Contains(key));
         }
         
-        public Point AddXY(double x,double y)
+        public DataPoint AddXY(double x,double y)
         {
             return this.AddXY(keyNum++.ToString(), x, y);
         }
         
-        public Point AddXY(string key,double x,double y)
+        public DataPoint AddXY(string key,double x,double y)
         {
             if (Find(key) != null)
             {
                 // 返すのはExceptionでもいいかも？？？
                 return null;
             }else { 
-                Point p = new Point(key, x, y);
-                p.LabelX = x.ToString();//TODO:書式設定
-                p.LabelY = y.ToString();
+                DataPoint p = new DataPoint(key, x, y);
+                p.LabelX = x.ToString("#.##");
+                p.LabelY = y.ToString("#.##");
                 dataPoint.Add(p);
                 return p;
             }
         }
 
-        public void Sort(IComparer<Point> comparer)
+        public void Sort(IComparer<DataPoint> comparer)
         {
             dataPoint.Sort(comparer);
         }
 
-        public void SortX()
+        public void Sort_X()
         {
-            dataPoint.Sort(Point.CompareByX);
+            dataPoint.Sort(DataPoint.CompareByX);
         }
 
-        public void SortY()
+        public void Sort_Y()
         {
-            dataPoint.Sort(Point.CompareByY);
+            dataPoint.Sort(DataPoint.CompareByY);
         }
 
         public IEnumerator GetEnumerator()
         {
             return dataPoint.GetEnumerator();
         }
+
+        public DataPoint GetMaxPoint(Comparison<DataPoint> comparer)
+        {
+            DataPoint maxPoint = null;
+
+            foreach(DataPoint p in dataPoint)
+            {
+                if (maxPoint != null )
+                {
+                    maxPoint = comparer(maxPoint,p) < 1 ? p : maxPoint;
+                }
+                else
+                {
+                    maxPoint = p;
+                }
+            }
+            return maxPoint;
+        }
+
+        public DataPoint GetMinPoint(Comparison<DataPoint> comparer)
+        {
+            DataPoint maxPoint = null;
+
+            foreach (DataPoint p in dataPoint)
+            {
+                if (maxPoint != null)
+                {
+                    maxPoint = comparer(p, maxPoint) < 1 ? p : maxPoint;
+                }
+                else
+                {
+                    maxPoint = p;
+                }
+            }
+            return maxPoint;
+        }
+
+
+        public DataPoint GetMaxPoint_X()
+        {
+            return GetMaxPoint(DataPoint.CompareByX);
+        }
+
+        public DataPoint GetMaxPoint_Y()
+        {
+            return GetMaxPoint(DataPoint.CompareByY);
+        }
+
     }
 
 

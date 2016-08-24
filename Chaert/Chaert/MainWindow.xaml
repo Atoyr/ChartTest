@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Chart"
+        xmlns:local="clr-namespace:Control"
         WindowStyle="None"
         Background="Transparent" AllowsTransparency="True"
         mc:Ignorable="d"
@@ -43,7 +43,7 @@
                 <MenuItem Height="25" Header="Files" />
             </Menu>
 
-            <local:ChartGrid x:Name="chart" Grid.Row="3" Grid.Column="1" BackgroundOpacity="0.5"/>
+            <local:Chart x:Name="chart" Grid.Row="3" Grid.Column="1" BackgroundOpacity="0.5"/>
 
             <!--<Button Grid.Row="2" Grid.ColumnSpan="2" Content="Toolbar" />-->
             <!--<UserControl1:chart  Grid.Row="2" Grid.Column="1"  HorizontalAlignment="Left" VerticalAlignment="Top"/>-->

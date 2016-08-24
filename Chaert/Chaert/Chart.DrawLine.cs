@@ -13,9 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-namespace Chart
+namespace Control
 {
-    partial class ChartGrid : Control
+    partial class Chart : System.Windows.Controls.Control
     {
         private int drawLine()
         {

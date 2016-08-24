@@ -6,17 +6,17 @@ using System.Windows.Media;
 using System.Threading.Tasks;
 using System.Windows.Shapes;
 
-namespace Chart
+namespace Control
 {
-    partial class ChartGrid
+    partial class Chart
     {
         public int Chart_Draw()
         {
             chartCanvas.Children.Clear();
-            Point beforePoint = null;
+            DataPoint beforePoint = null;
             Polyline pline = new Polyline();
 
-            foreach(Point P in this.chart.Series)
+            foreach(DataPoint P in this.chart.Series)
             {
                 if(beforePoint != null) {
                     //Line line = new Line()
