@@ -19,7 +19,7 @@ namespace Control
     public partial class Chart : System.Windows.Controls.Control
     {
         // UIオブジェクト
-        private Grid baseGrid;
+        private Grid        baseGrid;                           // スクロールバー・ラベルのベースとなるGrid
         private Canvas      lineCanvas;
         private Canvas      backgroundCanvas;
         private ScrollBar   horizontalScrollBar;
@@ -28,20 +28,20 @@ namespace Control
         private Canvas chartCanvas;
 
         // UIプロパティ
-        private int lineThickness_Horizontal = 1;        // X軸描画の線の太さ
-        private int lineThickness_Vertical = 1;        // Y軸描画の線の太さ
-        private int interval_Horizontal = 30;            // X軸グリッドの間隔
-        private int interval_Vertical = 30;            // Y軸グリッドの間隔
-        private bool isBoldLine = false;        // 一定カウントで太線描画するか
-        private int boldLineCount_Horizontal = 1;        // 太線描画する場合のX軸のカウント数
-        private int boldLineCount_Vertical = 1;        // 太線描画する場合のY軸のカウント数
-        private int boldLineThickness_Horizontal = 2;    // 太線描画する場合のX軸の線の太さ
-        private int boldLineThickness_Vertical = 2;    // 太線描画する場合のY軸の線の太さ
-        private double backgroundOpacity = 1;   // 背景色の透明度
-        private double lineOpacity = 1;         // 罫線の透明度
-        private Brush gridBackgroundColor = Brushes.Black; // 背景色
-        private Brush girdLineColor = Brushes.Gray;
-        private Brush girdBoldLineColor = Brushes.DarkGray;
+        private int lineThickness_Horizontal = 1;               // X軸描画の線の太さ
+        private int lineThickness_Vertical = 1;                 // Y軸描画の線の太さ
+        private int interval_Horizontal = 30;                   // X軸グリッドの間隔
+        private int interval_Vertical = 30;                     // Y軸グリッドの間隔
+        private bool isBoldLine = false;                        // 一定カウントで太線描画するか
+        private int boldLineCount_Horizontal = 1;               // 太線描画する場合のX軸のカウント数
+        private int boldLineCount_Vertical = 1;                 // 太線描画する場合のY軸のカウント数
+        private int boldLineThickness_Horizontal = 2;           // 太線描画する場合のX軸の線の太さ
+        private int boldLineThickness_Vertical = 2;             // 太線描画する場合のY軸の線の太さ
+        private double backgroundOpacity = 1;                   // 背景色の透明度
+        private double lineOpacity = 1;                         // 罫線の透明度
+        private Brush gridBackgroundColor = Brushes.Black;      // 背景色
+        private Brush girdLineColor = Brushes.Gray;             // 方眼カラー
+        private Brush girdBoldLineColor = Brushes.DarkGray;     // 方眼太線カラー
 
         // グラフ関連
         public Charttest chart;

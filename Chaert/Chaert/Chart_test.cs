@@ -10,7 +10,7 @@ namespace Control
     {
         public DataPointCollectoin Series;
 
-        public Chart()
+        public Charttest()
         {
             Series = new DataPointCollectoin();
         }
