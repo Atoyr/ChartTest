@@ -67,9 +67,9 @@ namespace Control
                         (d as Chart).lineOpacity = (double)e.NewValue;
                         // プロパティ変更時の処理
                         // 新しい値をリソースのScaleTransformにセットする
-                        if ((d as Chart).lineCanvas != null)
+                        if ((d as Chart).chartCanvas != null)
                         {
-                            (d as Chart).lineCanvas.Opacity = (d as Chart).lineOpacity;
+                            (d as Chart).chartCanvas.Opacity = (d as Chart).lineOpacity;
                         }
                     })
             );
@@ -100,7 +100,7 @@ namespace Control
                         (d as Chart).lineThickness_Horizontal = (int)e.NewValue;
                         // プロパティ変更時の処理
                         // 新しい値をリソースのScaleTransformにセットする
-                        if ((d as Chart).lineCanvas != null)
+                        if ((d as Chart).chartCanvas != null)
                         {
                             (d as Chart).Grid_SizeChanged(null, null);
                         }

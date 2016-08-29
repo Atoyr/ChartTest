@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Chart.ControlSetrting.cs" />
     <Compile Include="Chart_test.cs" />
     <Compile Include="Chart.DrawChart.cs" />
     <Compile Include="DataPointCollectoin.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Chart.cs" />
     <Compile Include="Chart.DrawLine.cs" />
     <Compile Include="Chart.Event.cs" />
-    <Compile Include="Chart.FirstChart.cs" />
     <Compile Include="Chart.Property.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

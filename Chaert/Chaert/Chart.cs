@@ -20,12 +20,14 @@ namespace Control
     {
         // UIオブジェクト
         private Grid        baseGrid;                           // スクロールバー・ラベルのベースとなるGrid
-        private Canvas      lineCanvas;
+        private Viewbox     chartViewbox;
+        private Canvas      chartCanvas;
+        private Viewbox     backgroundViewbox;
         private Canvas      backgroundCanvas;
+        private Viewbox     gridViewbox;
+        private Canvas      gridCanvas;
         private ScrollBar   horizontalScrollBar;
         private ScrollBar   verticalScrollBar;
-
-        private Canvas chartCanvas;
 
         // UIプロパティ
         private int lineThickness_Horizontal = 1;               // X軸描画の線の太さ
@@ -55,43 +57,42 @@ namespace Control
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
-            
+
             // イベント削除
-            //if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged -= this.Grid_SizeChanged; }
-            if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged -= this.Grid_SizeChanged; }
-            //if (this.backgroundCanvas != null) { backgroundCanvas.Loaded -= this.Grid_SizeChanged; }
+            removeInitalizedEvent();
 
             // オブジェクト再取得
             baseGrid = this.GetTemplateChild("PART_BaseGrid") as Grid;
-            lineCanvas = this.GetTemplateChild("PART_LineCanvas") as Canvas;
-            backgroundCanvas = this.GetTemplateChild("PART_BackgroundCanvas") as Canvas;
             horizontalScrollBar = this.GetTemplateChild("PART_HorizontalScrollBar") as ScrollBar;
             verticalScrollBar = this.GetTemplateChild("PART_VerticalScrollBar") as ScrollBar;
             chartCanvas = this.GetTemplateChild("PART_ChartCanvas") as Canvas;
+            chartViewbox = this.GetTemplateChild("PART_ChartViewbox") as Viewbox;
+            backgroundCanvas = this.GetTemplateChild("PART_BackgroundCanvas") as Canvas;
+            backgroundViewbox = this.GetTemplateChild("PART_BackgroundViewbox") as Viewbox;
+            gridCanvas = this.GetTemplateChild("PART_GridCanvas") as Canvas;
+            gridViewbox = this.GetTemplateChild("PART_GridViewbox") as Viewbox;
 
             this.init();
 
             // イベント設定
-            //if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged += this.Grid_SizeChanged; }
-            if (this.backgroundCanvas != null) { backgroundCanvas.SizeChanged += this.Grid_SizeChanged; }
-            //if (this.backgroundCanvas != null) { backgroundCanvas.Loaded += this.Grid_SizeChanged; }
-
+            addInitalizedEvent();
         }
 
         private void init()
         {
 
-            this.lineCanvas.Background = null;
-            this.SetBackgroundColor(this.gridBackgroundColor);
-            this.backgroundCanvas.Opacity = this.backgroundOpacity;
+            this.chartCanvas.Background = null;
+            this.SetBackground(this.gridBackgroundColor);
             this.chart = new Charttest();
+
             //demo
             this.demo();
         }
 
-        public int SetBackgroundColor(Brush brush)
+        public int SetBackground(Brush brush)
         {
-            if (brush != null && backgroundCanvas != null)
+            
+            if (brush != null && chartCanvas != null)
             {
                 backgroundCanvas.Background = brush;
                 return 0;
@@ -100,11 +101,16 @@ namespace Control
             return -1;
         }
 
+
+
         private void Grid_SizeChanged(object sender ,RoutedEventArgs e)
         {
-            Rect r = new Rect(0, 0, backgroundCanvas.ActualWidth, backgroundCanvas.ActualHeight);
-            lineCanvas.Clip = new RectangleGeometry() { Rect = r, RadiusX = 0, RadiusY = 0 };
-            chartCanvas.Clip = new RectangleGeometry() { Rect = r, RadiusX = 0, RadiusY = 0 };
+
+            //chartCanvas.Width = 100;//= baseGrid.ColumnDefinitions[1].ActualWidth;
+            //chartCanvas.Height = 100;// = baseGrid.RowDefinitions[1].ActualHeight;
+            //Rect r = new Rect(0, 0, baseViewbox.ActualWidth, baseViewbox.ActualHeight);
+            //lineCanvas.Clip = new RectangleGeometry() { Rect = r, RadiusX = 0, RadiusY = 0 };
+            //chartCanvas.Clip = new RectangleGeometry() { Rect = r, RadiusX = 0, RadiusY = 0 };
 
             this.drawLine();
             // demo

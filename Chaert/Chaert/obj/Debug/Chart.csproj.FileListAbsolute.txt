@@ -34,3 +34,5 @@ C:\private\source\ChartTest\Chaert\Chaert\obj\Debug\Chart.Properties.Resources.r
 C:\private\source\ChartTest\Chaert\Chaert\obj\Debug\Chart.csproj.GenerateResource.Cache
 C:\private\source\ChartTest\Chaert\Chaert\bin\Debug\Chart.exe.CodeAnalysisLog.xml
 C:\private\source\ChartTest\Chaert\Chaert\bin\Debug\Chart.exe.lastcodeanalysissucceeded
+P:\Dev\git\ChartTest\Chaert\Chaert\bin\Debug\Chart.exe.CodeAnalysisLog.xml
+P:\Dev\git\ChartTest\Chaert\Chaert\bin\Debug\Chart.exe.lastcodeanalysissucceeded
