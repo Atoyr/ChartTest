@@ -10,43 +10,44 @@ namespace Control
 {
     partial class Chart
     {
+        //TODO:Draw関連はDataColection側にもたせてDelegeteで処理
         public int Chart_Draw()
         {
             chartCanvas.Children.Clear();
             DataPoint beforePoint = null;
             Polyline pline = new Polyline();
 
-            foreach(DataPoint P in this.chart.Series)
-            {
-                if(beforePoint != null) {
-                    //Line line = new Line()
-                    //{
-                    //    X1 = beforePoint.X,
-                    //    Y1 = (beforePoint.Y * 100),
-                    //    X2 = P.X,
-                    //    Y2 = P.Y * 100
-                    //};
-                    //line.StrokeThickness = 1;
-                    //line.Stroke = Brushes.Red;
-                    //line.SnapsToDevicePixels = true;
-                    //chartCanvas.Children.Add(line);
-                    pline.Points.Add(new System.Windows.Point(P.X, (P.Y * 100 + 200)));
-                }
-                beforePoint = P;
-            }
-            pline.Stroke = Brushes.Red;
-            pline.StrokeThickness = 2;
-            pline.SnapsToDevicePixels = true;
-            chartCanvas.Children.Add(pline);
+            //foreach(DataPoint P in this.chart.Series)
+            //{
+            //    if(beforePoint != null) {
+            //        //Line line = new Line()
+            //        //{
+            //        //    X1 = beforePoint.X,
+            //        //    Y1 = (beforePoint.Y * 100),
+            //        //    X2 = P.X,
+            //        //    Y2 = P.Y * 100
+            //        //};
+            //        //line.StrokeThickness = 1;
+            //        //line.Stroke = Brushes.Red;
+            //        //line.SnapsToDevicePixels = true;
+            //        //chartCanvas.Children.Add(line);
+            //        pline.Points.Add(new System.Windows.Point(P.X, (P.Y * 100 + 200)));
+            //    }
+            //    beforePoint = P;
+            //}
+            //pline.Stroke = Brushes.Red;
+            //pline.StrokeThickness = 2;
+            //pline.SnapsToDevicePixels = true;
+            //chartCanvas.Children.Add(pline);
             return 0;
         }
 
         public int Demo()
         {
-            for (int i = 0; i < 2048; i++)
-            {
-                chart.Series.AddXY(i, Math.Sin(i * Math.PI / 180.0) );
-            }
+            //for (int i = 0; i < 2048; i++)
+            //{
+            //    chart.Series.AddXY(i, Math.Sin(i * Math.PI / 180.0) );
+            //}
 
             return 0;
         }

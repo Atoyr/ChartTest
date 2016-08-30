@@ -17,22 +17,35 @@ namespace Control
 {
     partial class Chart : System.Windows.Controls.Control
     {
-        private int drawGrid()
+        /// <summary>
+        /// 方眼を描画
+        /// </summary>
+        /// <returns></returns>
+        public int DrawGrid()
         {
-            drawGrid(true, true);
+            DrawGrid(true, true);
             return 0;
         }
 
-        private int drawGrid(bool needHorizontalLineDrawing,bool needVerticalLineDrawing)
+        /// <summary>
+        /// 方眼を描画
+        /// </summary>
+        /// <param name="needHorizontalLineDrawing"></param>
+        /// <param name="needVerticalLineDrawing"></param>
+        /// <returns></returns>
+        public int DrawGrid(bool needHorizontalLineDrawing,bool needVerticalLineDrawing)
         {
             this.gridCanvas.Children.Clear();
-            if (needHorizontalLineDrawing) { updateHorizontalLine(); }
-            if (needVerticalLineDrawing) { updateVerticalLine(); }
+            if (needHorizontalLineDrawing) { drawHorizontalLine(); }
+            if (needVerticalLineDrawing) { drawVerticalLine(); }
             return 0;
         }
-
-
-        private int updateHorizontalLine()
+        
+        /// <summary>
+        /// 背景方眼の縦罫線描画
+        /// </summary>
+        /// <returns></returns>
+        private int drawHorizontalLine()
         {
             if (isBoldLine)
             {
@@ -75,7 +88,7 @@ namespace Control
             return 0;
         }
 
-        private int updateVerticalLine()
+        private int drawVerticalLine()
         {
             if (isBoldLine)
             {

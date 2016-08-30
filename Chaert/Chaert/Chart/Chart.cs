@@ -45,8 +45,6 @@ namespace Control
         private Brush girdLineColor = Brushes.Gray;             // 方眼カラー
         private Brush girdBoldLineColor = Brushes.DarkGray;     // 方眼太線カラー
 
-        // グラフ関連
-        public Charttest chart;
 
         static Chart()
         {
@@ -75,7 +73,6 @@ namespace Control
             // イベント設定
             addInitalizedEvent();
             this.init();
-
         }
 
         private void init()
@@ -83,12 +80,11 @@ namespace Control
 
             this.chartCanvas.Background = null;
             this.ApplyBackground();
-            this.chart = new Charttest();
 
             //demo
             this.Demo();
 
-            this.drawGrid();
+            this.DrawGrid();
             // demo
             this.Chart_Draw();
 
