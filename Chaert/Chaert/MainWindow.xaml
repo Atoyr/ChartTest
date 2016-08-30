@@ -39,8 +39,8 @@
                 <Button Content="r" Style="{DynamicResource CaptionButtonStyleKey}" />
             </StackPanel>
             <!-- メニューやツールバー -->
-            <Menu Grid.Row="1" Height="25" Width="Auto" Grid.ColumnSpan="2">
-                <MenuItem Height="25" Header="Files" />
+            <Menu Grid.Row="1" Height="{x:Static SystemParameters.MenuBarHeight}" Width="Auto" Grid.ColumnSpan="2">
+                <MenuItem Height="{x:Static SystemParameters.MenuBarHeight}" Header="Files" />
             </Menu>
 
             <local:Chart x:Name="chart" Grid.Row="3" Grid.Column="1" BackgroundOpacity="0.5"/>

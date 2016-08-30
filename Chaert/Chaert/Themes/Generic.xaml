@@ -25,15 +25,15 @@
                                 <ColumnDefinition Width="Auto" /> <!-- Right Label -->
                                 <ColumnDefinition Width="Auto" /> <!-- Scroll bar -->
                             </Grid.ColumnDefinitions>
-                            <Grid>
-                                <Viewbox x:Name="PART_ChartViewbox" Grid.Row="1" Grid.Column="1" Width="Auto" Height="Auto" Stretch="Fill" Panel.ZIndex="9">
-                                    <Canvas x:Name="PART_ChartCanvas" Panel.ZIndex="9" Margin="0"  />
+                            <Grid Grid.Row="1" Grid.Column="1" Width="Auto" Height="Auto">
+                                <Viewbox x:Name="PART_BackgroundViewbox" Stretch="Fill" Panel.ZIndex="1">
+                                    <Canvas x:Name="PART_BackgroundCanvas" Margin="0"  />
                                 </Viewbox>
-                                <Viewbox x:Name="PART_GridViewbox" Grid.Row="1" Grid.Column="1"  Width="Auto" Height="Auto" Stretch="Fill" Panel.ZIndex="2">
-                                    <Canvas x:Name="PART_GridCanvas" Panel.ZIndex="9" Margin="0"  />
+                                <Viewbox x:Name="PART_GridViewbox"  Stretch="Fill" Panel.ZIndex="2">
+                                    <Canvas x:Name="PART_GridCanvas" Margin="0"  />
                                 </Viewbox>
-                                <Viewbox x:Name="PART_BackgroundViewbox" Grid.Row="1" Grid.Column="1"  Width="Auto" Height="Auto" Stretch="Fill" Panel.ZIndex="1">
-                                    <Canvas x:Name="PART_BackgroundCanvas" Panel.ZIndex="9" Margin="0"  />
+                                <Viewbox x:Name="PART_ChartViewbox" Stretch="Fill" Panel.ZIndex="9">
+                                    <Canvas x:Name="PART_ChartCanvas" Margin="0"  />
                                 </Viewbox>
                             </Grid>
                             <ScrollBar x:Name="PART_HorizontalScrollBar" Grid.Row="3" Grid.ColumnSpan="3" Orientation="Horizontal" />

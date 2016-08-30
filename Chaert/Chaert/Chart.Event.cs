@@ -38,7 +38,7 @@ namespace Control
         public event BackgroundLoader_EventHandler Background_Loaded;
         #endregion
 
-#region 自作イベント
+        #region 自作イベント
         private void chartCanvas_Loaded(object sender,RoutedEventArgs e)
         {
             ApplyChartCanvasSizeChange();

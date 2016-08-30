@@ -63,43 +63,38 @@ namespace Control
 
             // オブジェクト再取得
             baseGrid = this.GetTemplateChild("PART_BaseGrid") as Grid;
-            horizontalScrollBar = this.GetTemplateChild("PART_HorizontalScrollBar") as ScrollBar;
-            verticalScrollBar = this.GetTemplateChild("PART_VerticalScrollBar") as ScrollBar;
-            chartCanvas = this.GetTemplateChild("PART_ChartCanvas") as Canvas;
-            chartViewbox = this.GetTemplateChild("PART_ChartViewbox") as Viewbox;
             backgroundCanvas = this.GetTemplateChild("PART_BackgroundCanvas") as Canvas;
             backgroundViewbox = this.GetTemplateChild("PART_BackgroundViewbox") as Viewbox;
             gridCanvas = this.GetTemplateChild("PART_GridCanvas") as Canvas;
             gridViewbox = this.GetTemplateChild("PART_GridViewbox") as Viewbox;
-
-            this.init();
+            chartCanvas = this.GetTemplateChild("PART_ChartCanvas") as Canvas;
+            chartViewbox = this.GetTemplateChild("PART_ChartViewbox") as Viewbox;
+            horizontalScrollBar = this.GetTemplateChild("PART_HorizontalScrollBar") as ScrollBar;
+            verticalScrollBar = this.GetTemplateChild("PART_VerticalScrollBar") as ScrollBar;
 
             // イベント設定
             addInitalizedEvent();
+            this.init();
+
         }
 
         private void init()
         {
 
             this.chartCanvas.Background = null;
-            this.SetBackground(this.gridBackgroundColor);
+            this.ApplyBackground();
             this.chart = new Charttest();
 
             //demo
             this.demo();
+
+            this.drawLine();
+            // demo
+            this.Chart_Draw();
+
         }
 
-        public int SetBackground(Brush brush)
-        {
-            
-            if (brush != null && chartCanvas != null)
-            {
-                backgroundCanvas.Background = brush;
-                return 0;
-            }
 
-            return -1;
-        }
 
 
 
