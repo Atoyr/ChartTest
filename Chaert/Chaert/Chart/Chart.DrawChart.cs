@@ -41,7 +41,7 @@ namespace Control
             return 0;
         }
 
-        public int demo()
+        public int Demo()
         {
             for (int i = 0; i < 2048; i++)
             {

@@ -59,13 +59,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Chart.ControlSetrting.cs" />
-    <Compile Include="Chart_test.cs" />
-    <Compile Include="Chart.DrawChart.cs" />
-    <Compile Include="DataPointCollectoin.cs" />
-    <Compile Include="Point.cs" />
-    <Compile Include="Series.cs" />
-    <Page Include="Styles.xaml">
+    <Compile Include="Chart\Chart.ControlSetrting.cs" />
+    <Compile Include="Chart\Chart.DrawChart.cs" />
+    <Compile Include="ChartData\DataPointCollectoin.cs" />
+    <Compile Include="ChartData\Point.cs" />
+    <Compile Include="ChartData\Series.cs" />
+    <Page Include="Resource\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -77,10 +76,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Chart.cs" />
-    <Compile Include="Chart.DrawLine.cs" />
-    <Compile Include="Chart.Event.cs" />
-    <Compile Include="Chart.Property.cs" />
+    <Compile Include="Chart\Chart.cs" />
+    <Compile Include="Chart\Chart.DrawGrid.cs" />
+    <Compile Include="Chart\Chart.Event.cs" />
+    <Compile Include="Chart\Chart.Property.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<?xml-stylesheet type="text/xsl" href="p:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="14.0">
  <Targets>
-  <Target Name="C:\private\source\ChartTest\Chaert\Chaert\bin\Debug\Chart.exe">
+  <Target Name="P:\Dev\git\ChartTest\Chaert\Chaert\bin\Debug\Chart.exe">
    <Modules>
     <Module Name="chart.exe">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">'Chart.exe' を厳密な名前キーで署名します。</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Error">外部から参照可能な型を公開するため、'Chart.exe' を CLSCompliant(true) に設定します。</Issue>
       </Message>
-      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
        <Issue Certainty="95" Level="Warning">アセンブリ 'Chart.exe' には ResX ベースのリソース ファイルが含まれているため、NeutralResourcesLanguage 属性を設定し、アセンブリ内のリソースの言語を指定してください。これにより、最初にリソースが取得されるときのルックアップのパフォーマンスが向上する可能性があります。</Issue>
       </Message>
      </Messages>
@@ -23,114 +23,106 @@
          <Members>
           <Member Name="#.cctor()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="37">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="39">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="39">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="70">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="72">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="72">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="103">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="105">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="37">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="39">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="39">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="70">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="72">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="72">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="103">パラメーター 'd' は、型 'Chart' にメソッド 'Chart.Chart()' で複数回キャストしています。重複する isint 命令を除去するために、'as' 演算子の結果をキャッシュするか、直接キャストしてください。</Issue>
             </Message>
-            <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
-             <Issue Certainty="90" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="24">すべてのフィールドを、それらが宣言されたときに 'Chart' で初期化して、明示的な静的コンストラクターを削除します。</Issue>
+            <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="24">すべてのフィールドを、それらが宣言されたときに 'Chart' で初期化して、明示的な静的コンストラクターを削除します。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#backgroundViewbox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">フィールド 'Chart.backgroundViewbox' が使用されていない、または割り当てられているだけのようです。このフィールドを使用するか、または削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#chart" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">フィールド 'Chart.chart' は宣言している型の外から参照できるため、アクセシビリティをプライベートに変更してください。このフィールドにアクセスできるように、フィールドの現在のアクセシビリティと同じアクセシビリティのプロパティを追加します。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Chart_Draw()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.DrawChart.cs" Line="14">アンダースコアをメンバー名 'Chart.Chart_Draw()' から削除してください。</Issue>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.DrawChart.cs" Line="14">アンダースコアをメンバー名 'Chart.Chart_Draw()' から削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#chartViewbox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">フィールド 'Chart.chartViewbox' が使用されていない、または割り当てられているだけのようです。このフィールドを使用するか、または削除してください。</Issue>
-            </Message>
-           </Messages>
-          </Member>
-          <Member Name="#demo()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
-           <Messages>
-            <Message Id="demo" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.DrawChart.cs" Line="45">'Demo' に変更して、メンバー名 'Chart.demo()' の 'demo' の大文字と小文字の指定を訂正してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#gridViewbox" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">フィールド 'Chart.gridViewbox' が使用されていない、または割り当てられているだけのようです。このフィールドを使用するか、または削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#horizontalScrollBar" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">フィールド 'Chart.horizontalScrollBar' が使用されていない、または割り当てられているだけのようです。このフィールドを使用するか、または削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#LineThickness_x" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="x" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="85" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="112">'X' に変更して、メンバー名 'Chart.LineThickness_x' の 'x' の大文字と小文字の指定を訂正してください。</Issue>
+            <Message Id="x" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="112">'X' に変更して、メンバー名 'Chart.LineThickness_x' の 'x' の大文字と小文字の指定を訂正してください。</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="112">アンダースコアをメンバー名 'Chart.LineThickness_x' から削除してください。</Issue>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Chart.Property.cs" Line="112">アンダースコアをメンバー名 'Chart.LineThickness_x' から削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#LineThickness_xProperty" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="x" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+            <Message Id="x" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="85" Level="Error">'X' に変更して、メンバー名 'Chart.LineThickness_xProperty' の 'x' の大文字と小文字の指定を訂正してください。</Issue>
             </Message>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">アンダースコアをメンバー名 'Chart.LineThickness_xProperty' から削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#verticalScrollBar" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">フィールド 'Chart.verticalScrollBar' が使用されていない、または割り当てられているだけのようです。このフィールドを使用するか、または削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Background_Loaded" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">アンダースコアをメンバー名 'Chart.Background_Loaded' から削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Chart_Loaded" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">アンダースコアをメンバー名 'Chart.Chart_Loaded' から削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Grid_Loaded" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">アンダースコアをメンバー名 'Chart.Grid_Loaded' から削除してください。</Issue>
             </Message>
            </Messages>
@@ -139,39 +131,39 @@
         </Type>
         <Type Name="Chart+BackgroundLoader_EventHandler" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">アンダースコアを型名 'Chart.BackgroundLoader_EventHandler' から削除してください。</Issue>
           </Message>
-          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
            <Issue Certainty="90" Level="Error">型 'Chart.BackgroundLoader_EventHandler' を入れ子にしないでください。外部から参照できなくするために、そのアクセシビリティを変更することもできます。</Issue>
           </Message>
-          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">'Chart.BackgroundLoader_EventHandler' を削除し、その使用を EventHandler&lt;T&gt; で置き換えます</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Chart+ChartLoader_EventHandler" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">アンダースコアを型名 'Chart.ChartLoader_EventHandler' から削除してください。</Issue>
           </Message>
-          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
            <Issue Certainty="90" Level="Error">型 'Chart.ChartLoader_EventHandler' を入れ子にしないでください。外部から参照できなくするために、そのアクセシビリティを変更することもできます。</Issue>
           </Message>
-          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">'Chart.ChartLoader_EventHandler' を削除し、その使用を EventHandler&lt;T&gt; で置き換えます</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="Chart+GridLoader_EventHandler" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="95" Level="Error">アンダースコアを型名 'Chart.GridLoader_EventHandler' から削除してください。</Issue>
           </Message>
-          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
            <Issue Certainty="90" Level="Error">型 'Chart.GridLoader_EventHandler' を入れ子にしないでください。外部から参照できなくするために、そのアクセシビリティを変更することもできます。</Issue>
           </Message>
-          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+          <Message TypeName="UseGenericEventHandlerInstances" Category="Microsoft.Design" CheckId="CA1003" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">'Chart.GridLoader_EventHandler' を削除し、その使用を EventHandler&lt;T&gt; で置き換えます</Issue>
           </Message>
          </Messages>
@@ -180,7 +172,7 @@
          <Members>
           <Member Name="#Series" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
              <Issue Certainty="90" Level="Error">フィールド 'Charttest.Series' は宣言している型の外から参照できるため、アクセシビリティをプライベートに変更してください。このフィールドにアクセスできるように、フィールドの現在のアクセシビリティと同じアクセシビリティのプロパティを追加します。</Issue>
             </Message>
            </Messages>
@@ -191,161 +183,156 @@
          <Members>
           <Member Name="#.ctor(System.String,System.Double,System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Point.cs" Line="14">メソッド 'DataPoint.DataPoint(string, double, double)' で、パラメーター名 'x' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Point.cs" Line="14">メソッド 'DataPoint.DataPoint(string, double, double)' で、パラメーター名 'x' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Point.cs" Line="14">メソッド 'DataPoint.DataPoint(string, double, double)' で、パラメーター名 'y' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Point.cs" Line="14">メソッド 'DataPoint.DataPoint(string, double, double)' で、パラメーター名 'y' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CompareByX(Control.DataPoint,Control.DataPoint)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="a" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Point.cs" Line="56">メソッド 'DataPoint.CompareByX(DataPoint, DataPoint)' で、パラメーター名 'a' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="a" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Point.cs" Line="56">メソッド 'DataPoint.CompareByX(DataPoint, DataPoint)' で、パラメーター名 'a' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Point.cs" Line="56">メソッド 'DataPoint.CompareByX(DataPoint, DataPoint)' で、パラメーター名 'b' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Point.cs" Line="56">メソッド 'DataPoint.CompareByX(DataPoint, DataPoint)' で、パラメーター名 'b' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="0" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning">外部から参照可能なメソッド 'DataPoint.CompareByX(DataPoint, DataPoint)' で、パラメーター 'a' を使用前に検証してください。</Issue>
             </Message>
-            <Message Id="1" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="DependsOnFix">
+            <Message Id="1" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning">外部から参照可能なメソッド 'DataPoint.CompareByX(DataPoint, DataPoint)' で、パラメーター 'b' を使用前に検証してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#CompareByY(Control.DataPoint,Control.DataPoint)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="a" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Point.cs" Line="63">メソッド 'DataPoint.CompareByY(DataPoint, DataPoint)' で、パラメーター名 'a' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="a" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Point.cs" Line="63">メソッド 'DataPoint.CompareByY(DataPoint, DataPoint)' で、パラメーター名 'a' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Point.cs" Line="63">メソッド 'DataPoint.CompareByY(DataPoint, DataPoint)' で、パラメーター名 'b' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="b" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Point.cs" Line="63">メソッド 'DataPoint.CompareByY(DataPoint, DataPoint)' で、パラメーター名 'b' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="0" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="DependsOnFix">
+            <Message Id="0" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning">外部から参照可能なメソッド 'DataPoint.CompareByY(DataPoint, DataPoint)' で、パラメーター 'a' を使用前に検証してください。</Issue>
             </Message>
-            <Message Id="1" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="DependsOnFix">
+            <Message Id="1" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="DependsOnFix">
              <Issue Certainty="75" Level="Warning">外部から参照可能なメソッド 'DataPoint.CompareByY(DataPoint, DataPoint)' で、パラメーター 'b' を使用前に検証してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#point" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">フィールド 'DataPoint.point' が使用されていない、または割り当てられているだけのようです。このフィールドを使用するか、または削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#X" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="X" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Point.cs" Line="26">メンバー名 'DataPoint.X' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="X" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Point.cs" Line="26">メンバー名 'DataPoint.X' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Y" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="Point.cs" Line="31">メンバー名 'DataPoint.Y' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="Y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="Point.cs" Line="31">メンバー名 'DataPoint.Y' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
            </Messages>
           </Member>
          </Members>
         </Type>
         <Type Name="DataPointCollectoin" Kind="Class" Accessibility="Public" ExternallyVisible="True">
-         <Messages>
-          <Message TypeName="CollectionsShouldImplementGenericInterface" Category="Microsoft.Design" CheckId="CA1010" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
-           <Issue Certainty="60" Level="Error">'DataPointCollectoin' はジェネリックでない、厳密に型指定されたコレクションです。T が 'DataPointCollectoin' の元になる要素型である IEnumerable&lt;T&gt; のインスタンスに実装を追加してください。</Issue>
-          </Message>
-         </Messages>
          <Members>
           <Member Name="#AddXY(System.Double,System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="43">メソッド 'DataPointCollectoin.AddXY(double, double)' で、パラメーター名 'x' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="43">メソッド 'DataPointCollectoin.AddXY(double, double)' で、パラメーター名 'x' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="43">メソッド 'DataPointCollectoin.AddXY(double, double)' で、パラメーター名 'y' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="43">メソッド 'DataPointCollectoin.AddXY(double, double)' で、パラメーター名 'y' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
-             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="44">'int.ToString()' の振る舞いは、現在のユーザーのロケール設定によって異なる場合があるため、'DataPointCollectoin.AddXY(double, double)' 内のこの呼び出しを 'int.ToString(IFormatProvider)' の呼び出しで置き換えます。'int.ToString(IFormatProvider)' の結果をユーザーに対して表示する場合は、'IFormatProvider' パラメーターに 'CultureInfo.CurrentCulture' を指定します。結果をディスクやデータベースに保持する場合など、ソフトウェアで結果を格納してアクセスする場合は、'CultureInfo.InvariantCulture' を指定します。</Issue>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="44">'int.ToString()' の振る舞いは、現在のユーザーのロケール設定によって異なる場合があるため、'DataPointCollectoin.AddXY(double, double)' 内のこの呼び出しを 'int.ToString(IFormatProvider)' の呼び出しで置き換えます。'int.ToString(IFormatProvider)' の結果をユーザーに対して表示する場合は、'IFormatProvider' パラメーターに 'CultureInfo.CurrentCulture' を指定します。結果をディスクやデータベースに保持する場合など、ソフトウェアで結果を格納してアクセスする場合は、'CultureInfo.InvariantCulture' を指定します。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#AddXY(System.String,System.Double,System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="48">メソッド 'DataPointCollectoin.AddXY(string, double, double)' で、パラメーター名 'x' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="48">メソッド 'DataPointCollectoin.AddXY(string, double, double)' で、パラメーター名 'x' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="48">メソッド 'DataPointCollectoin.AddXY(string, double, double)' で、パラメーター名 'y' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="48">メソッド 'DataPointCollectoin.AddXY(string, double, double)' で、パラメーター名 'y' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="System.Double.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
-             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="55">'double.ToString(string)' の振る舞いは、現在のユーザーのロケール設定によって異なる場合があるため、'DataPointCollectoin.AddXY(string, double, double)' 内のこの呼び出しを 'double.ToString(string, IFormatProvider)' の呼び出しで置き換えます。'double.ToString(string, IFormatProvider)' の結果をユーザーに対して表示する場合は、'IFormatProvider' パラメーターに 'CultureInfo.CurrentCulture' を指定します。結果をディスクやデータベースに保持する場合など、ソフトウェアで結果を格納してアクセスする場合は、'CultureInfo.InvariantCulture' を指定します。</Issue>
-             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="56">'double.ToString(string)' の振る舞いは、現在のユーザーのロケール設定によって異なる場合があるため、'DataPointCollectoin.AddXY(string, double, double)' 内のこの呼び出しを 'double.ToString(string, IFormatProvider)' の呼び出しで置き換えます。'double.ToString(string, IFormatProvider)' の結果をユーザーに対して表示する場合は、'IFormatProvider' パラメーターに 'CultureInfo.CurrentCulture' を指定します。結果をディスクやデータベースに保持する場合など、ソフトウェアで結果を格納してアクセスする場合は、'CultureInfo.InvariantCulture' を指定します。</Issue>
+            <Message Id="System.Double.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="55">'double.ToString(string)' の振る舞いは、現在のユーザーのロケール設定によって異なる場合があるため、'DataPointCollectoin.AddXY(string, double, double)' 内のこの呼び出しを 'double.ToString(string, IFormatProvider)' の呼び出しで置き換えます。'double.ToString(string, IFormatProvider)' の結果をユーザーに対して表示する場合は、'IFormatProvider' パラメーターに 'CultureInfo.CurrentCulture' を指定します。結果をディスクやデータベースに保持する場合など、ソフトウェアで結果を格納してアクセスする場合は、'CultureInfo.InvariantCulture' を指定します。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="56">'double.ToString(string)' の振る舞いは、現在のユーザーのロケール設定によって異なる場合があるため、'DataPointCollectoin.AddXY(string, double, double)' 内のこの呼び出しを 'double.ToString(string, IFormatProvider)' の呼び出しで置き換えます。'double.ToString(string, IFormatProvider)' の結果をユーザーに対して表示する場合は、'IFormatProvider' パラメーターに 'CultureInfo.CurrentCulture' を指定します。結果をディスクやデータベースに保持する場合など、ソフトウェアで結果を格納してアクセスする場合は、'CultureInfo.InvariantCulture' を指定します。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetMaxPoint(System.Comparison`1&lt;Control.DataPoint&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="90">外部から参照可能なメソッド 'DataPointCollectoin.GetMaxPoint(Comparison&lt;DataPoint&gt;)' で、パラメーター 'comparer' を使用前に検証してください。</Issue>
+            <Message Id="0" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="90">外部から参照可能なメソッド 'DataPointCollectoin.GetMaxPoint(Comparison&lt;DataPoint&gt;)' で、パラメーター 'comparer' を使用前に検証してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetMaxPoint_X()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="120">アンダースコアをメンバー名 'DataPointCollectoin.GetMaxPoint_X()' から削除してください。</Issue>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="120">アンダースコアをメンバー名 'DataPointCollectoin.GetMaxPoint_X()' から削除してください。</Issue>
             </Message>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Certainty="50" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="120">適切である場合、'DataPointCollectoin.GetMaxPoint_X()' をプロパティに変更します。</Issue>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="120">適切である場合、'DataPointCollectoin.GetMaxPoint_X()' をプロパティに変更します。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetMaxPoint_Y()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="125">アンダースコアをメンバー名 'DataPointCollectoin.GetMaxPoint_Y()' から削除してください。</Issue>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="125">アンダースコアをメンバー名 'DataPointCollectoin.GetMaxPoint_Y()' から削除してください。</Issue>
             </Message>
-            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Certainty="50" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="125">適切である場合、'DataPointCollectoin.GetMaxPoint_Y()' をプロパティに変更します。</Issue>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="125">適切である場合、'DataPointCollectoin.GetMaxPoint_Y()' をプロパティに変更します。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetMinPoint(System.Comparison`1&lt;Control.DataPoint&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="108">外部から参照可能なメソッド 'DataPointCollectoin.GetMinPoint(Comparison&lt;DataPoint&gt;)' で、パラメーター 'comparer' を使用前に検証してください。</Issue>
+            <Message Id="0" TypeName="パブリック メソッドの引数の検証" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="108">外部から参照可能なメソッド 'DataPointCollectoin.GetMinPoint(Comparison&lt;DataPoint&gt;)' で、パラメーター 'comparer' を使用前に検証してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Item[System.Double,System.Double]" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="31">メソッド 'DataPointCollectoin.this[double, double]' で、パラメーター名 'x' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="x" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="31">メソッド 'DataPointCollectoin.this[double, double]' で、パラメーター名 'x' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="31">メソッド 'DataPointCollectoin.this[double, double]' で、パラメーター名 'y' よりも意味のある名前を指定することを考慮してください。</Issue>
+            <Message Id="y" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterMoreMeaningfulName" Certainty="75" Level="CriticalWarning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="31">メソッド 'DataPointCollectoin.this[double, double]' で、パラメーター名 'y' よりも意味のある名前を指定することを考慮してください。</Issue>
             </Message>
-            <Message TypeName="IndexersShouldNotBeMultidimensional" Category="Microsoft.Design" CheckId="CA1023" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Certainty="50" Level="Warning" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="31">インデクサー 'DataPointCollectoin.this[double, double]' が、単一文字列またはそのインデックスとしての整数値を使用するように、再度デザインし直してください。</Issue>
+            <Message TypeName="IndexersShouldNotBeMultidimensional" Category="Microsoft.Design" CheckId="CA1023" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="31">インデクサー 'DataPointCollectoin.this[double, double]' が、単一文字列またはそのインデックスとしての整数値を使用するように、再度デザインし直してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Sort_X()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="68">アンダースコアをメンバー名 'DataPointCollectoin.Sort_X()' から削除してください。</Issue>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="68">アンダースコアをメンバー名 'DataPointCollectoin.Sort_X()' から削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Sort_Y()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error" Path="C:\private\source\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="73">アンダースコアをメンバー名 'DataPointCollectoin.Sort_Y()' から削除してください。</Issue>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="P:\Dev\git\ChartTest\Chaert\Chaert" File="DataPointCollectoin.cs" Line="73">アンダースコアをメンバー名 'DataPointCollectoin.Sort_Y()' から削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
@@ -353,28 +340,28 @@
         </Type>
         <Type Name="Series" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
          <Messages>
-          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
            <Issue Certainty="75" Level="Warning">'Series' は、インスタンス化されていない内部クラスです。その場合、コードをアセンブリから削除してください。このクラスが静的メソッドのみを含むことを意図されている場合、コンパイラが既定のコンストラクターを生成しないように、プライベート コンストラクターを追加することを考慮してください。</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#Max_X" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">フィールド 'Series.Max_X' が使用されていない、または割り当てられているだけのようです。このフィールドを使用するか、または削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Max_Y" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">フィールド 'Series.Max_Y' が使用されていない、または割り当てられているだけのようです。このフィールドを使用するか、または削除してください。</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Points" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 03:58:24Z" FixCategory="NonBreaking">
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2016-08-30 13:10:08Z" FixCategory="NonBreaking">
              <Issue Certainty="75" Level="Warning">フィールド 'Series.Points' が使用されていない、または割り当てられているだけのようです。このフィールドを使用するか、または削除してください。</Issue>
             </Message>
            </Messages>
@@ -418,16 +405,6 @@
    <Email>[none]</Email>
    <MessageLevel Certainty="75">Warning</MessageLevel>
    <File Name="performancerules.dll" Version="14.0.0.0" />
-  </Rule>
-  <Rule TypeName="CollectionsShouldImplementGenericInterface" Category="Microsoft.Design" CheckId="CA1010">
-   <Name>コレクションは、ジェネリック インターフェイスを実装しなければなりません</Name>
-   <Description>非ジェネリックな厳密に型指定されたコレクションは、ジェネリック コレクション インターフェイスの 1 つを実装しなければなりません。これは、ジェネリック API を伴うコレクションのより充実した統合を可能にします。</Description>
-   <Resolution Name="Default">{0} はジェネリックでない、厳密に型指定されたコレクションです。T が {0} の元になる要素型である {1}&lt;T&gt; のインスタンスに実装を追加してください。</Resolution>
-   <Owner />
-   <Url>http://msdn.microsoft.com/library/ms182132.aspx</Url>
-   <Email>[none]</Email>
-   <MessageLevel Certainty="90">Error</MessageLevel>
-   <File Name="designrules.dll" Version="14.0.0.0" />
   </Rule>
   <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
    <Name>不必要にキャストしません</Name>

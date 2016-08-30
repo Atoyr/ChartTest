@@ -102,7 +102,7 @@ namespace Control
                         // 新しい値をリソースのScaleTransformにセットする
                         if ((d as Chart).chartCanvas != null)
                         {
-                            (d as Chart).Grid_SizeChanged(null, null);
+                            //(d as Chart).(null, null);
                         }
                     })
             );

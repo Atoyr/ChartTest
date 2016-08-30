@@ -86,30 +86,12 @@ namespace Control
             this.chart = new Charttest();
 
             //demo
-            this.demo();
+            this.Demo();
 
-            this.drawLine();
+            this.drawGrid();
             // demo
             this.Chart_Draw();
 
-        }
-
-
-
-
-
-        private void Grid_SizeChanged(object sender ,RoutedEventArgs e)
-        {
-
-            //chartCanvas.Width = 100;//= baseGrid.ColumnDefinitions[1].ActualWidth;
-            //chartCanvas.Height = 100;// = baseGrid.RowDefinitions[1].ActualHeight;
-            //Rect r = new Rect(0, 0, baseViewbox.ActualWidth, baseViewbox.ActualHeight);
-            //lineCanvas.Clip = new RectangleGeometry() { Rect = r, RadiusX = 0, RadiusY = 0 };
-            //chartCanvas.Clip = new RectangleGeometry() { Rect = r, RadiusX = 0, RadiusY = 0 };
-
-            this.drawLine();
-            // demo
-            this.Chart_Draw();
         }
     }
 }

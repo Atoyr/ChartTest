@@ -17,13 +17,13 @@ namespace Control
 {
     partial class Chart : System.Windows.Controls.Control
     {
-        private int drawLine()
+        private int drawGrid()
         {
-            drawLine(true, true);
+            drawGrid(true, true);
             return 0;
         }
 
-        private int drawLine(bool needHorizontalLineDrawing,bool needVerticalLineDrawing)
+        private int drawGrid(bool needHorizontalLineDrawing,bool needVerticalLineDrawing)
         {
             this.gridCanvas.Children.Clear();
             if (needHorizontalLineDrawing) { updateHorizontalLine(); }
